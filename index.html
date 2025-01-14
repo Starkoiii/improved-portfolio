@@ -14,116 +14,98 @@
 <body class="flex flex-col min-h-screen font-[Bangers] tracking-wider">
 
 <!-- NAVBAR / SECTION-->
-<nav class="bg-blue-600 border-gray-200">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <!-- Brand name on left with padding -->
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse pl-8">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Tyson Starks-Vaught</span>
-    </a>
-    
-    <!-- Navigation items on right -->
-    <div class="items-center justify-between md:flex" id="navbar-cta">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-        <li>
-          <a href="#" class="block py-2 px-3 md:p-0 text-white" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 md:p-0 text-white hover:text-gray-200">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 md:p-0 text-white hover:text-gray-200">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 md:p-0 text-white hover:text-gray-200">Contact</a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar flex justify-between items-center">
+  <span class="navbar-brand">Tyson Starks-Vaught</span>
+  <div class="flex gap-8 mr-8">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">About</a>
+    <a href="#" class="nav-link">Portfolio</a>
+    <a href="mailto:ta.starks3@gmail.com" class="nav-link">Contact</a>
+
   </div>
 </nav>
 
 <!-- Add this new section right after the navbar -->
-<main class="flex-grow min-h-[calc(100vh-200px)] mb-8">
+<main class="main-container">
     <!-- Hero Section -->
-    <div class="container mx-auto px-4 flex flex-col items-center justify-center min-h-screen text-center">
+    <div class="hero-section">
         <!-- Invisible spacer -->
         <div class="mb-8">
             <div class="w-48 h-24"></div>
         </div>
         
         <!-- Main Heading -->
-        <h1 class="text-6xl mb-4 text-gray-800">Welcome to my Portfolio</h1>
+        <h1 class="hero-title">Welcome to my Portfolio</h1>
         
         <!-- Subheading -->
-        <p class="text-2xl mb-8 text-gray-600 max-w-2xl">
-            Full Stack Developer based in [Your Location]. I build accessible, inclusive products and digital experiences for the web.
+        <p class="hero-subtitle">
+            Junior Full Stack Developer based in Phoenix, Az.
         </p>
         
         <!-- Social Links -->
-        <div class="flex space-x-8 mb-16">
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+        <div class="social-links">
+            <a href="https://github.com/Starkoiii" target="_blank"" class="social-icon">
                 <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.163 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
                 </svg>
             </a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/tastarks/" class="social-icon">
                 <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
             </a>
         </div>
 
-        <!-- Technology Card - Adjusted margin -->
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto hover:shadow-xl transition-shadow duration-300 mb-16">
-            <h2 class="text-3xl mb-6 text-gray-800">Technologies</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Each technology item -->
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+        <!-- Technology Card -->
+        <div class="tech-card">
+            <h2 class="tech-title">Technologies</h2>
+            <div class="tech-grid">
+                <!-- HTML -->
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <!-- HTML5 icon path -->
                         <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
                     </svg>
-                    <span class="font-medium">HTML5</span>
-                </div>
+                </a>
 
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <!-- CSS -->
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <!-- CSS3 icon path -->
                         <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
                     </svg>
-                    <span class="font-medium">CSS</span>
-                </div>
+                </a>
 
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <!-- JavaScript -->
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <!-- JavaScript icon path -->
                         <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
                     </svg>
-                    <span class="font-medium">JavaScript</span>
-                </div>
+                </a>
 
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
-                        <!-- Swift icon path -->
+                <!-- Swift -->
+                <a href="https://developer.apple.com/swift/" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M21.984 16.348c.056-.112.056-.224.112-.336 1.346-5.272-1.851-11.44-7.347-14.693 2.412 3.253 3.365 7.122 2.524 10.599-.056.28-.168.617-.28.897a5.173 5.173 0 0 1-.45-.28S11.104 9.17 5.273 3.282c-.169-.168 3.14 4.71 6.841 8.58-1.738-1.01-6.673-4.542-9.758-7.403.337.617.842 1.234 1.346 1.851 2.58 3.309 5.945 7.346 9.983 10.43-2.86 1.74-6.842 1.851-10.88 0-1.01-.448-1.85-1.009-2.804-1.682 1.682 2.636 4.318 5.048 7.459 6.337 3.757 1.627 7.57 1.515 10.318 0h.057c.112-.056.224-.112.336-.224 1.346-.673 3.982-1.402 5.44 1.402.392.785 1.121-2.86-1.121-6.225z"/>
                     </svg>
-                    <span class="font-medium">Swift</span>
-                </div>
+                </a>
 
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <!-- Node.js -->
+                <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <!-- Node.js icon path -->
                         <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
                     </svg>
-                    <span class="font-medium">Node.js</span>
-                </div>
+                </a>
 
-                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <!-- Tailwind CSS -->
+                <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="tech-item">
+                    <svg class="w-12 h-12 text-blue-600 mb-2 tech-icon" fill="currentColor" viewBox="0 0 24 24">
                         <!-- Tailwind CSS icon path -->
                         <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
                     </svg>
-                    <span class="font-medium">Tailwind CSS</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -131,28 +113,52 @@
 
 <!-- FOOTER SECTION -->
 
-<footer class="bg-white rounded-lg shadow dark:bg-gray-900">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Tyson Starks. All Rights Reserved.</span>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links flex justify-center gap-8 mb-4">
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Portfolio</a>
+            <a href="mailto:ta.starks3@gmail.com" class="footer-link">Contact</a>
+        </div>
+        <div class="flex justify-center">
+            <span class="copyright">© 2024 Tyson Starks. All Rights Reserved.</span>
+        </div>
     </div>
 </footer>
+<!-- Dynamic Background -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+<script>
+  // SETTINGS FOR PARTICLE.JS //
+particlesJS('particles-js', {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: '#008000' },
+    shape: { type: 'circle' },
+    opacity: { value: 0.5, random: false },
+    size: { value: 3, random: true },
+    line_linked: { 
+      enable: true, 
+      distance: 150, 
+      color: '#00FF00',
+      opacity: 0.4, 
+      width: 1 
+    },
+    move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: {
+      onhover: { enable: true, mode: 'repulse' },
+      onclick: { enable: true, mode: 'push' },
+      resize: true
+    }
+  },
+  retina_detect: true
+});
+</script>
+<script src="./assets/js/script.js"></script>
   </body>
     
     
