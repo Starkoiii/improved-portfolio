@@ -15,6 +15,10 @@ body {
 /* Navigation */
 .navbar {
     background-color: rgb(0, 0, 0); /* Changed to sky-200/baby blue */
+    padding: 0.5rem 1rem; /* Reduced vertical padding */
+    min-height: 3rem;    /* Reduced minimum height */
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -23,37 +27,56 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* Navbar link styles */
 .nav-link {
     color: rgb(255, 255, 255);
     transition: color 0.2s;
+    transition: all 0.2s ease-in;
+    letter-spacing: normal;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.25rem 0.5rem; /* Reduced padding */
+    height: auto;
+    line-height: 1.1;    /* Slightly reduced line height */
+    overflow: visible;
 }
 
+/* Navbar hover effect (explicitly red) */
 .nav-link:hover {
-    color: rgb(229, 231, 235); /* hover:text-gray-200 */
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+    transition: all 0s;
 }
 
 /* Main Content */
 .main-container {
-    flex-grow: 1;
-    min-height: calc(100vh - 200px);
-    margin-bottom: 2rem;
+    height: calc(100vh - 140px); /* Accounts for navbar and footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
 .hero-section {
-    min-height: 100vh;
-    text-align: center;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
+
 /* welcome to my portfolio */
 .hero-title {
-    font-size: 3.75rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     color: rgb(0, 0, 0); /* Dark gray for contrast */
 }
 /*  SUBTITLE FOR WELCOME NOTE */
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     color: rgb(0, 0, 1); /* Medium gray for contrast */
     max-width: 42rem;
     margin-left: auto;
@@ -75,42 +98,48 @@ body {
     width: 3rem;
     height: 3rem;
     color: rgb(0, 0, 0);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in;
 }
 
 .social-icon:hover {
-    color: rgb(4, 83, 255);
-    filter: drop-shadow(0 0 8px rgba(4, 83, 255, 0.6));
+    color: #ff0000;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
     transform: scale(1.1);
+    transition: all 0s;
+}
+
+/* Footer social icon styles (blue glow) */
+.footer .social-icon:hover {
+    color: #ff0000;
+    filter: drop-shadow(0 0 8px rgba(0, 68, 255, 0.6));
+    transform: scale(1.1);
+    transition: all 0s;
 }
 
 /* Technologies Card */
 .tech-card {
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 -5px 15px -3px rgba(0, 0, 0, 0.1),
-                0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    max-width: 36rem;
-    margin: 0 auto 4rem auto;
-    transition: box-shadow 0.3s;
+    margin-top: -2rem;  /* Move it up */
+    padding: 2rem;      /* More padding around entire card */
+    width: 80%;         /* Make it more rectangular */
+    max-width: 800px;   /* Control maximum width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.tech-card:hover {
-    box-shadow: 0 -8px 20px -5px rgba(0, 0, 0, 0.1),
-                0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
 /* Technologies title */
 .tech-title {
-    font-size: 1.875rem;
-    margin-bottom: 2rem;
-    color: rgb(0, 68, 255); /* Changed to navy blue to match footer */
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);  /* 3 icons per row */
+    gap: 2rem;          /* More space between icons */
+    padding: 2rem;      /* More internal padding */
+    background: rgba(255, 255, 255, 0.05);  /* Optional: subtle background */
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
 @media (min-width: 768px) {
@@ -124,13 +153,13 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0.75rem;
-    border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
 
 .tech-item:hover {
     background-color: transparent;
     border-color: transparent;
+    box-shadow: none;
 }
 
 .tech-icon {
@@ -157,12 +186,18 @@ body {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    padding: 0.5rem 1rem;  /* Match navbar padding */
+    min-height: 2rem;      /* Match navbar height */
 }
 
 .footer-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;         /* Reduced gap between elements */
 }
 
 @media (min-width: 768px) {
@@ -174,7 +209,8 @@ body {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.25rem; /* Reduced margin */
+    gap: 1rem;            /* Keep links well-spaced */
 }
 
 @media (min-width: 640px) {
@@ -188,16 +224,97 @@ body {
     font-size: 0.875rem;
     margin-right: 1.5rem;
     text-decoration: none;
+    transition: all 0.2s ease-in;
+    letter-spacing: normal;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.25rem 0.5rem; /* Match navbar link padding */
+    height: auto;
+    line-height: 1.1;        /* Match navbar line height */
+    overflow: visible;
 }
 
 .footer-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ff0000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+    transition: all 0s;
+}
+
+.footer-link:focus,
+.footer-link:active {
+    text-decoration: none;
 }
 
 .copyright {
     color: white;
     font-size: 0.875rem;
     text-align: center;
+}
+
+/* Remove spacer */
+.mb-8 {
+    margin-bottom: 1rem;
+}
+
+/* Shared base styles */
+.nav-link, .footer-link {
+    transition: all 0.2s ease-in;
+    letter-spacing: normal;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem;
+    height: auto;
+    line-height: 1.2;
+    overflow: visible;
+}
+
+/* Navbar specific hover (red) */
+.navbar .nav-link:hover {
+    color: #ff0000 !important;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+    transition: all 0s;
+}
+
+/* Footer specific hover (blue) */
+.footer .footer-link:hover {
+    color: #0044ff !important;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 68, 255, 0.8);
+    transform: scale(1.05);
+    transition: all 0s;
+}
+
+/* Social icons in navbar (red) */
+.social-icon:hover {
+    color: #ff0000;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
+    transform: scale(1.1);
+    transition: all 0s;
+}
+
+/* Social icons in footer (blue) */
+.footer .social-icon:hover {
+    color: #0044ff;
+    filter: drop-shadow(0 0 8px rgba(0, 68, 255, 0.6));
+    transform: scale(1.1);
+    transition: all 0s;
+}
+
+/* Remove any lingering effects */
+.nav-link:active, .footer-link:active,
+.nav-link:focus, .footer-link:focus {
+    transition: all 0s;
+    color: inherit;
+    letter-spacing: normal;
+    text-shadow: none;
+    transform: none;
 }
 
 

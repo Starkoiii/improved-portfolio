@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             color: {
-                value: '#008000'
+                value: '#ff0000'
             },
             shape: {
                 type: 'circle'
