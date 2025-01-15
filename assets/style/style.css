@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url( 'https://fonts.googleapis.com/css?');
 
 /* Base styles */
 body {
@@ -315,6 +316,209 @@ body {
     letter-spacing: normal;
     text-shadow: none;
     transform: none;
+}
+÷
+/* About Page Styles */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.skills-container, .journey-container {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Box Animation Styles */
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -8px 105px;
+    background: linear-gradient(315deg,#940404, #1227de);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -15px 0px;
+}
+
+/* Animation for the box */
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 22px;
+    border: 4px solid #ffffff;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.box:hover .content img {
+    opacity: 0;
+}
+
+.content h9 {
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.content h9 span {
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+/* Add this to center the box in your layout */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Adjust for navbar and footer */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-heading {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.about-details {
+    display: grid;
+    gap: 2rem;
+}
+
+.detail-item {
+    border-left: 3px solid #ff0000;
+    padding-left: 1rem;
+}
+
+.detail-item h3 {
+    font-size: 1.4rem;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.about-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-right {
+        order: -1;
+    }
 }
 
 
