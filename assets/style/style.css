@@ -66,6 +66,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-top: -20%;
+    ;
 }
 
 /* welcome to my portfolio */
@@ -119,42 +121,45 @@ body {
 
 /* Technologies Card */
 .tech-card {
-    margin-top: -2rem;  /* Move it up */
-    padding: 2rem;      /* More padding around entire card */
-    width: 80%;         /* Make it more rectangular */
-    max-width: 800px;   /* Control maximum width */
-    margin-left: auto;
-    margin-right: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -80px; /* Increased negative margin to close gap */
 }
 
-/* Technologies title */
 .tech-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 icons per row */
-    gap: 2rem;          /* More space between icons */
-    padding: 2rem;      /* More internal padding */
-    background: rgba(255, 255, 255, 0.05);  /* Optional: subtle background */
-    border-radius: 8px; /* Optional: rounded corners */
-}
-
-@media (min-width: 768px) {
-    .tech-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;  /* Adjust this to match your title width */
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
 }
 
 .tech-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.75rem;
-    transition: all 0.3s ease;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.tech-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .tech-item:hover {
@@ -183,41 +188,36 @@ body {
 
 /* Footer */
 .footer {
-    background-color: rgb(1, 3, 8);
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     margin-top: auto;
-    padding: 0.5rem 1rem;  /* Match navbar padding */
-    min-height: 2rem;      /* Match navbar height */
+    padding: 10px 0;
+    width: 100%;
+    background: black;
+    color: white;
 }
 
 .footer-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;         /* Reduced gap between elements */
-}
-
-@media (min-width: 768px) {
-    .footer-container {
-        padding: 3% 1rem;
-    }
+    gap: 5px;  /* Increased gap */
+    background: black;
 }
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0.25rem; /* Reduced margin */
-    gap: 1rem;            /* Keep links well-spaced */
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;  /* Increased margin */
+    padding: 0;
 }
 
-@media (min-width: 640px) {
-    .footer-links {
-        margin-bottom: 0;
-    }
+.footer .flex.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;  /* Added padding */
+    color: white;
+    line-height: 1.2;  /* Added line height */
 }
 
 .footer-link {
@@ -520,5 +520,20 @@ body {
         order: -1;
     }
 }
+
+/* Add this to your existing styles */
+.navbar-brand a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.navbar-brand a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+}
+
+
+
 
 
