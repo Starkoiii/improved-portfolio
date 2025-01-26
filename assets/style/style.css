@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white; /* Changed to white */
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -20,6 +21,10 @@ body {
     min-height: 3rem;    /* Reduced minimum height */
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -54,6 +59,12 @@ body {
 
 /* Main Content */
 .main-container {
+    margin-top: 70px; /* Slightly reduced */
+    margin-bottom: 100px; /* Keep space for footer */
+    overflow-y: auto;
+    flex: 1;
+    position: relative;
+    z-index: 1;
     height: calc(100vh - 140px); /* Accounts for navbar and footer */
     display: flex;
     flex-direction: column;
@@ -90,7 +101,7 @@ body {
 /* Social Links */
 .social-links {
     display: flex;
-    gap: 2rem;
+    gap: 4.5rem;
     margin-bottom: 6rem;
     justify-content: center;
     width: 100%;
@@ -98,17 +109,16 @@ body {
 
 /* LOGO COLORS FOR SOCIAL LINKS */
 .social-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     color: rgb(0, 0, 0);
     transition: all 0.2s ease-in;
 }
 
 .social-icon:hover {
     color: #ff0000;
-    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
     transform: scale(1.1);
-    transition: all 0s;
+    transition: all 15s;
 }
 
 /* Footer social icon styles (blue glow) */
@@ -192,6 +202,9 @@ body {
     width: 100%;
     background: black;
     color: white;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .footer-container {
@@ -550,7 +563,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 6rem;
-    padding: 1rem 8rem 3rem;
+    padding: 0 8rem;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -609,28 +622,25 @@ body {
     }
 }
 
-/* Portfolio title styling */
+/* Restore title size */
 .portfolio-title {
-    font-size: 3rem;
-    text-align: left;
-    margin: 2rem 0 2rem 2rem; /* Reduced left margin to match About page */
+    font-size: 4rem;
+    text-align: center;
     color: black;
     font-family: 'Bangers', cursive;
     letter-spacing: 3px;
+    margin-bottom: 3rem; /* Slightly reduced */
 }
 
-/* Responsive adjustments for title */
-@media screen and (max-width: 1024px) {
-    .portfolio-title {
-        margin-left: 2rem;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .portfolio-title {
-        margin-left: 1.5rem;
-        font-size: 2.5rem;
-    }
+/* Keep your existing modal styles */
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
 }
 
 
